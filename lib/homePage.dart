@@ -29,6 +29,11 @@ class _HomePageState extends State<HomePage> {
   // <-- User ID
   // email = userMy.email // <-- Their email
 
+           
+           CircleAvatar(
+            radius: 40,
+            backgroundImage: NetworkImage(userMy!.photoURL.toString()),
+           ),
             Text(
               FirebaseAuth.instance.currentUser!.displayName!??"",
               style: const TextStyle(
