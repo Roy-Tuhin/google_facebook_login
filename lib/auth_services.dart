@@ -40,8 +40,13 @@ class AuthService{
   }
 
   // Sign out
-signOut(){
-  FirebaseAuth.instance.signOut();
+// signOut(){
+//   FirebaseAuth.instance.signOut();
+// }
+
+Future signOut()async{
+  await GoogleSignIn().signOut();
+  await FirebaseAuth.instance.signOut();
 }
   
 }
